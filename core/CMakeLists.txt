@@ -42,6 +42,7 @@ add_library(libjsonnet_static STATIC ${LIBJSONNET_HEADERS} ${LIBJSONNET_SOURCE})
 add_dependencies(libjsonnet_static md5 stdlib)
 target_link_libraries(libjsonnet_static md5)
 set_target_properties(libjsonnet_static PROPERTIES OUTPUT_NAME jsonnet)
+install(TARGETS libjsonnet DESTINATION lib)
 
 # Tests
 
